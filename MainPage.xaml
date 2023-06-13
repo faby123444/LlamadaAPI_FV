@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LlamadaAPI_FV.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Text="Latitud: " Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"/>
+        <Label Text="Logintud: " Grid.Row="0" Grid.Column="1" HorizontalOptions="Center"/>
+        <Entry x:Name="lat" Placeholder="Ingrese latitud: " Grid.Row="1" Grid.Column="0" ClearButtonVisibility="WhileEditing"/>
+        <Entry x:Name="lon" Placeholder="Ingrese latitud: " Grid.Row="1" Grid.Column="1" ClearButtonVisibility="WhileEditing"/>
+        <Button Text="Obtener Clima" Grid.Row="2" Clicked="OnGetWeatherClicked_FV" Grid.ColumnSpan="2"/>
+        <Image x:Name="icono" Grid.Row="3" Grid.Column="1" WidthRequest="100" HeightRequest="100"/>
+        <Label Text="Estado del clima" Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="End"/>
+        <Label x:Name="weatherLabel" Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="Center"/>
+        <Label Text="Pais" Grid.Row="5" Grid.Column="0" HorizontalTextAlignment="End"/>
+        <Label x:Name="Pais" Grid.Row="5" Grid.Column="1" HorizontalTextAlignment="Center"/>
+        <Label Text="Ciudad" Grid.Row="6" Grid.Column="0" HorizontalTextAlignment="End"/>
+        <Label x:Name="Ciudad" Grid.Row="6" Grid.Column="1" HorizontalTextAlignment="Center"/>
+    </Grid>
+</ContentPage>
